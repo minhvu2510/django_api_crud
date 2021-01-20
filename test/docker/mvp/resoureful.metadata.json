@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":2,"key":{"_id":1},"name":"_id_","ns":"mvp.resoureful"},{"v":2,"unique":true,"key":{"key":1},"name":"key_1","ns":"mvp.resoureful"}],"uuid":"250399c373394e17b69d066669f93f1e"}

@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":2,"key":{"_id":1},"name":"_id_","ns":"mvp.notwithstanding"},{"v":2,"unique":true,"key":{"key":1},"name":"key_1","ns":"mvp.notwithstanding"}],"uuid":"fb9d6f8048af44ba98ff9b30802a14dc"}
