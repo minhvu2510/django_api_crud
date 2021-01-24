@@ -6,7 +6,7 @@ class Word(models.Model):
     word = models.CharField(max_length=100, blank=True)
     mean = models.TextField()
     topic = models.CharField(max_length=100, blank=True, default='other')
-    level = models.CharField(max_length=10, blank=True, default='10')
+    level = models.IntegerField(max_length=10, blank=True, default=10)
     favorite = models.BooleanField(default=False)
     class Meta:
         ordering = ['level']
@@ -14,7 +14,7 @@ class Word(models.Model):
 class Topic(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     topic = models.CharField(max_length=100, blank=True)
-    level = models.CharField(max_length=10, blank=True, default='10')
+    level = models.IntegerField(max_length=10, blank=True, default=10)
     favorite = models.BooleanField(default=False)
 
     class Meta:

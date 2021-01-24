@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  mongodb:
+    image : mongo
+    container_name: mongodb
+    environment:
+      - PUID=1000
+      - PGID=1000
+    volumes:
+      - /Users/minhvu/Python/Django/django_api_crud/test/docker/mvp:/data/mvp
+    ports:
+      - 27017:27017
+    restart: unless-stopped

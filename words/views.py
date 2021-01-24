@@ -4,6 +4,8 @@ from rest_framework import mixins
 from rest_framework import generics
 from rest_framework.authentication import SessionAuthentication, BasicAuthentication, TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
+from rest_framework.views import APIView
+from rest_framework.response import Response
 
 
 class WordList(mixins.ListModelMixin,
@@ -46,6 +48,7 @@ class TopicList(mixins.ListModelMixin,
 
     def post(self, request, *args, **kwargs):
         return self.create(request, *args, **kwargs)
+
 class TopicDetail(mixins.RetrieveModelMixin,
                     mixins.UpdateModelMixin,
                     mixins.DestroyModelMixin,
@@ -61,3 +64,9 @@ class TopicDetail(mixins.RetrieveModelMixin,
 
     def delete(self, request, *args, **kwargs):
         return self.destroy(request, *args, **kwargs)
+
+class Contracts(APIView):
+    def get(self, request, format=None):
+        snippets = Word.objects.raw('SELECT * FROM words_topic')
+        serializer = WordSerializer(snippets, many=True)
+        return Response(serializer.data)

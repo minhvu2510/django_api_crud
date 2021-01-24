@@ -1,4 +1,5 @@
 from pymongo import MongoClient
+import requests
 client = MongoClient('mongodb://localhost/', 27017)
 DATABASE = client.mvp
 lst = ['contracts', 'marketing', 'warranties', 'business_planning', 'conferences', 'computers', 'office_technology']
@@ -38,5 +39,20 @@ def get_all(table):
     else:
         message = {"data": []}
     return  message
+def create_data():
+    url = "http://127.0.0.1:81/disable-drive"
+    headers = {
+        'Authorization': 'af4593ff029c48db8abc4363803278da',
+        'Content-Type': 'application/json'
+    }
+    data = {
+        'drive_id': drive_id
+    }
+    response = requests.post(url, data=data, headers=headers, timeout=7)
+    query = {}
+    for word in get_document(get_document('contracts', query)):
+        print(word)
 if __name__ == '__main__':
-    print(show_allcolection())
+    # query = {}
+    # print(get_document('contracts', query))
+    create_data()

@@ -6,6 +6,7 @@ urlpatterns = [
     path('words/', views.WordList.as_view()),
     path('words/<int:pk>/', views.WordDetail.as_view()),
     path('topics/', views.TopicList.as_view()),
+    path('topicsA/', views.Contracts.as_view()),
     path('topics/<int:pk>/', views.TopicDetail.as_view()),
 ]
 
