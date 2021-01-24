@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":2,"key":{"_id":1},"name":"_id_","ns":"mvp.inventory"},{"v":2,"unique":true,"key":{"key":1},"name":"key_1","ns":"mvp.inventory"}],"uuid":"c552bab21759487abc512a3fefd77006"}

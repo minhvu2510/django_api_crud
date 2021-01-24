@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":2,"key":{"_id":1},"name":"_id_","ns":"mvp.ets2018_7"},{"v":2,"unique":true,"key":{"key":1},"name":"key_1","ns":"mvp.ets2018_7"}],"uuid":"6f4000641c4c4889b21a4c995a19b70d"}

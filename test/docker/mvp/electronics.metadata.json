@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":2,"key":{"_id":1},"name":"_id_","ns":"mvp.electronics"},{"v":2,"unique":true,"key":{"key":1},"name":"key_1","ns":"mvp.electronics"}],"uuid":"bbcd2ad5d54d4e6cb23c034ce2ca8379"}
