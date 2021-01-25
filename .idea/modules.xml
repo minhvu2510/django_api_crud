@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/essential_words.iml" filepath="$PROJECT_DIR$/.idea/essential_words.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/django_api_crud.iml" filepath="$PROJECT_DIR$/.idea/django_api_crud.iml" />
     </modules>
   </component>
 </project>

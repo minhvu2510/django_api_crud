@@ -22,8 +22,9 @@ class WordList(mixins.ListModelMixin,
     filterset_fields = ['topic', 'level']
     # permission_classes = (IsAuthenticated,permissions.IsAuthenticatedOrReadOnly)
 
-    authentication_classes = [authentication.SessionAuthentication,
-                              authentication.TokenAuthentication]
+    # authentication_classes = [authentication.SessionAuthentication,
+    #                           authentication.TokenAuthentication]
+    permission_classes = [permissions.DjangoModelPermissionsOrAnonReadOnly]
 
     def get_permissions(self):
         if self.request.method in ['PUT', 'DELETE']:
@@ -54,8 +55,13 @@ class WordDetail(mixins.RetrieveModelMixin,
     serializer_class = WordSerializer
     # IsAuthenticatedOrReadOnly
 
-    # permission_classes = (IsAuthenticatedOrReadOnly)
-    permission_classes = (DjangoModelPermissionsOrAnonReadOnly)
+    # permission_classes = (IsAuthenticated)
+    # permission_classes = (DjangoModelPermissionsOrAnonReadOnly)
+    # authentication_classes = [authentication.SessionAuthentication,
+    #                           authentication.TokenAuthentication]
+    # authentication_classes = [authentication.SessionAuthentication,
+    #                           authentication.TokenAuthentication]
+    permission_classes = [permissions.DjangoModelPermissionsOrAnonReadOnly]
 
     def get(self, request, *args, **kwargs):
         return self.retrieve(request, *args, **kwargs)
