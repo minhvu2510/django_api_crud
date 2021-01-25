@@ -13,11 +13,13 @@ class TopicSerializer(serializers.ModelSerializer):
         model = Topic
         fields = ['id', 'topic', 'level', 'favorite']
 
-class StatListView(ListAPIView):
-    queryset = Word.objects.raw("SELECT * FROM")
-    serializer_class = WordSerializer
-
-    def list(self):
-        queryset = self.get_queryset()
-        serializer = WordSerializer(list(queryset), many=True)
-        return Response(serializer.data)
+# class GroupSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = Group
+#         fields = ('name',)
+#
+# class UserSerializer(serializers.ModelSerializer):
+#     groups = GroupSerializer(many=True)
+#     class Meta:
+#         model = User
+#         fields = ('url', 'username', 'email', 'is_staff', 'groups',)

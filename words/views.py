@@ -8,7 +8,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import filters
-from rest_framework.permissions import IsAuthenticated
+from rest_framework.permissions import IsAuthenticated, IsAuthenticatedOrReadOnly, DjangoModelPermissionsOrAnonReadOnly
 from rest_framework import permissions
 # from django.contrib.auth import authentication
 from rest_framework import authentication
@@ -52,15 +52,10 @@ class WordDetail(mixins.RetrieveModelMixin,
                     generics.GenericAPIView):
     queryset = Word.objects.all()
     serializer_class = WordSerializer
+    # IsAuthenticatedOrReadOnly
 
-    authentication_classes = [authentication.SessionAuthentication,
-                              authentication.TokenAuthentication]
-
-    def get_permissions(self):
-        print
-        if self.request.method in ['PUT', 'DELETE']:
-            return [permissions.IsAdminUser()]
-        return [permissions.IsAuthenticated()]
+    # permission_classes = (IsAuthenticatedOrReadOnly)
+    permission_classes = (DjangoModelPermissionsOrAnonReadOnly)
 
     def get(self, request, *args, **kwargs):
         return self.retrieve(request, *args, **kwargs)
