@@ -263,7 +263,7 @@
       <workItem from="1611476047171" duration="4147000" />
       <workItem from="1611480451743" duration="3879000" />
       <workItem from="1611543052310" duration="14049000" />
-      <workItem from="1611580780370" duration="5238000" />
+      <workItem from="1611580780370" duration="5356000" />
     </task>
     <task id="LOCAL-00001" summary="Rec : Fix permission api">
       <created>1611583049942</created>
@@ -276,7 +276,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34514000" />
+    <option name="totallyTimeSpent" value="34632000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="31" y="45" width="1440" height="834" extended-state="0" />
