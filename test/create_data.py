@@ -1,8 +1,9 @@
 from pymongo import MongoClient
 import requests
+import time
 client = MongoClient('mongodb://localhost/', 27017)
 DATABASE = client.mvp
-lst = ['contracts', 'marketing', 'warranties', 'business_planning', 'conferences', 'computers', 'office_technology']
+lst = ['contracts','marketing', 'warranties', 'business_planning', 'conferences', 'computers', 'office_technology']
 def get_document(table,query,order=None,distinct=None,page=None,limit=None,incre=-1):
     if page:
         if not limit:
@@ -31,6 +32,54 @@ def show_allcolection():
     for i in DATABASE.collection_names():
         allcolec.append(i)
     return allcolec
+def create_topic():
+    url = "http://127.0.0.1:8000/topics"
+    headers = {
+        'Authorization': 'af4593ff029c48db8abc4363803278da'
+    }
+    for topic in lst:
+        param = {'topic': topic}
+        response = requests.post(url, data=param, headers=headers, timeout=17)
+        print(response)
+def create_words():
+    url = "http://127.0.0.1:8000/words"
+    headers = {
+        'Authorization': 'af4593ff029c48db8abc4363803278da'
+    }
+    query = {}
+    contrac = get_document('contracts', query)['data']
+    print(contrac[-1])
+    for toipic in lst:
+        for word in contrac:
+            print(word['key'], word['value'])
+            param = {'word': word['key'],
+                     'mean': word['value'],
+
+
+                     'topic': toipic
+                     }
+            response = requests.post(url, data=param, headers=headers, timeout=17)
+            print(response)
+            time.sleep(1)
+    # for topic in lst:
+    #     param = {'topic': topic}
+    #     response = requests.post(url, data=param, headers=headers, timeout=17)
+    #     print(response)
+def create_topic():
+    url = "http://127.0.0.1:8000/topics"
+    headers = {
+        'Authorization': 'af4593ff029c48db8abc4363803278da'
+    }
+    query = {}
+    contrac = get_document('contracts', query)['data']
+    print(contrac[-1])
+    for toipic in lst:
+        param = {'level': 10,
+                 'topic': toipic
+                 }
+        response = requests.post(url, data=param, headers=headers, timeout=17)
+        print(response)
+        time.sleep(1)
 def get_all(table):
     res = DATABASE[table].find()
     res = filter(lambda r: r != '', res)
@@ -52,7 +101,33 @@ def create_data():
     query = {}
     for word in get_document(get_document('contracts', query)):
         print(word)
+def create_words():
+    url = "http://127.0.0.1:8000/words"
+    headers = {
+        'Authorization': 'af4593ff029c48db8abc4363803278da'
+    }
+    query = {}
+    contrac = get_document('contracts', query)['data']
+    print(contrac[-1])
+    for toipic in lst:
+        for word in contrac:
+            print(word['key'], word['value'])
+            param = {'word': word['key'],
+                     'mean': word['value'],
+                     'topic': toipic
+                     }
+            response = requests.post(url, data=param, headers=headers, timeout=17)
+            print(response)
+            time.sleep(1)
+    # for topic in lst:
+    #     param = {'topic': topic}
+    #     response = requests.post(url, data=param, headers=headers, timeout=17)
+    #     print(response)
+
 if __name__ == '__main__':
+    # create_data()
+    # print(show_allcolection())
     # query = {}
-    # print(get_document('contracts', query))
-    create_data()
+    # print(get_document('contracts', query)['data'])
+    # print(create_topic())
+    print(create_words())

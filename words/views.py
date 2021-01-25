@@ -6,13 +6,37 @@ from rest_framework.authentication import SessionAuthentication, BasicAuthentica
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.views import APIView
 from rest_framework.response import Response
-
+from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework import filters
+from rest_framework.permissions import IsAuthenticated
+from rest_framework import permissions
+# from django.contrib.auth import authentication
+from rest_framework import authentication
 
 class WordList(mixins.ListModelMixin,
                   mixins.CreateModelMixin,
                   generics.GenericAPIView):
     queryset = Word.objects.all()
     serializer_class = WordSerializer
+    filter_backends = [DjangoFilterBackend]
+    filterset_fields = ['topic', 'level']
+    # permission_classes = (IsAuthenticated,permissions.IsAuthenticatedOrReadOnly)
+
+    authentication_classes = [authentication.SessionAuthentication,
+                              authentication.TokenAuthentication]
+
+    def get_permissions(self):
+        if self.request.method in ['PUT', 'DELETE']:
+            return [permissions.IsAdminUser()]
+        return [permissions.IsAuthenticated()]
+    # permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    #
+    # filter_backends = [filters.OrderingFilter]
+    # ordering_fields = ['level', 'word']
+    # ordering = ['level']
+
+    # filter_backends = [filters.OrderingFilter]
+    # ordering_fields = '__all__'
     # authentication_classes = [SessionAuthentication, BasicAuthentication]
     # authentication_classes = [TokenAuthentication]
     # permission_classes = [IsAuthenticated]
@@ -29,11 +53,20 @@ class WordDetail(mixins.RetrieveModelMixin,
     queryset = Word.objects.all()
     serializer_class = WordSerializer
 
+    authentication_classes = [authentication.SessionAuthentication,
+                              authentication.TokenAuthentication]
+
+    def get_permissions(self):
+        print
+        if self.request.method in ['PUT', 'DELETE']:
+            return [permissions.IsAdminUser()]
+        return [permissions.IsAuthenticated()]
+
     def get(self, request, *args, **kwargs):
         return self.retrieve(request, *args, **kwargs)
 
     def put(self, request, *args, **kwargs):
-        return self.update(request, *args, **kwargs)
+        return self.partial_update(request, *args, **kwargs)
 
     def delete(self, request, *args, **kwargs):
         return self.destroy(request, *args, **kwargs)
@@ -65,8 +98,18 @@ class TopicDetail(mixins.RetrieveModelMixin,
     def delete(self, request, *args, **kwargs):
         return self.destroy(request, *args, **kwargs)
 
-class Contracts(APIView):
+class WordByQuery(APIView):
     def get(self, request, format=None):
-        snippets = Word.objects.raw('SELECT * FROM words_topic')
+        level = request.GET.get('level', None)
+        topic = request.GET.get('topic', None)
+        if level and topic:
+            snippets = Word.objects.raw('SELECT * FROM words_word WHERE level>%s AND topic=%s',[9,topic])
+        else:
+            if topic:
+                snippets = Word.objects.raw('SELECT * FROM words_word WHERE topic=%s', [topic])
+            elif level:
+                snippets = Word.objects.raw('SELECT * FROM words_word WHERE level>%s', [level])
+            else:
+                snippets = Word.objects.raw('SELECT * FROM words_word')
         serializer = WordSerializer(snippets, many=True)
         return Response(serializer.data)
