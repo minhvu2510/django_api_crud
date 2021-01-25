@@ -25,7 +25,7 @@ SECRET_KEY = 'i91u+0*v1@yv-go%grm=tnm5e8*eozzrr*2@cwtii$kxape^4)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['toeic-essential-staging.herokuapp.com', 'toeic-essential-production.herokuapp.com']
 
 
 # Application definition
