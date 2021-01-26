@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b4398712-a9e4-4155-92bf-f05d9e08a192" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/essential_words/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/essential_words/settings.py" afterDir="false" />
-    </list>
+    <list default="true" id="b4398712-a9e4-4155-92bf-f05d9e08a192" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,8 +67,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/essential_words/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="153" column="3" lean-forward="true" selection-start-line="151" selection-start-column="2" selection-end-line="153" selection-end-column="3" />
+            <state relative-caret-position="439">
+              <caret line="157" lean-forward="true" selection-start-line="157" selection-end-line="157" />
               <folding>
                 <element signature="e#316#340#0" expanded="true" />
               </folding>
@@ -104,11 +100,11 @@
       <find>rest_framework_swagger</find>
       <find>TEMPLATES</find>
       <find>whitenoise</find>
-      <find>staticfiles</find>
       <find>MIDDLEWARE_CLASSES</find>
       <find>STATICFILES_DIRS</find>
       <find>PROJECT_DIR</find>
       <find>STATIC_URL</find>
+      <find>staticfiles</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -242,7 +238,7 @@
       <workItem from="1611580780370" duration="6659000" />
       <workItem from="1611627364940" duration="11767000" />
       <workItem from="1611650857280" duration="5776000" />
-      <workItem from="1611675363796" duration="747000" />
+      <workItem from="1611675363796" duration="1299000" />
     </task>
     <task id="LOCAL-00001" summary="Rec : Fix permission api">
       <created>1611583049942</created>
@@ -255,7 +251,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54245000" />
+    <option name="totallyTimeSpent" value="54797000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1440" height="834" extended-state="6" />
@@ -474,8 +470,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/essential_words/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="153" column="3" lean-forward="true" selection-start-line="151" selection-start-column="2" selection-end-line="153" selection-end-column="3" />
+        <state relative-caret-position="439">
+          <caret line="157" lean-forward="true" selection-start-line="157" selection-end-line="157" />
           <folding>
             <element signature="e#316#340#0" expanded="true" />
           </folding>
