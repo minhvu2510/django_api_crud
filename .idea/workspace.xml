@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b4398712-a9e4-4155-92bf-f05d9e08a192" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/essential_words/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/essential_words/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/essential_words/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/essential_words/wsgi.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -81,8 +80,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/essential_words/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="662">
-              <caret line="149" selection-start-line="149" selection-end-line="149" />
+            <state relative-caret-position="707">
+              <caret line="152" column="71" selection-start-line="152" selection-start-column="71" selection-end-line="152" selection-end-column="71" />
               <folding>
                 <element signature="e#316#340#0" expanded="true" />
               </folding>
@@ -157,8 +156,8 @@
       <find>drf_multiple_model</find>
       <find>rest_framework_swagger</find>
       <find>TEMPLATES</find>
-      <find>staticfiles</find>
       <find>whitenoise</find>
+      <find>staticfiles</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -291,7 +290,7 @@
       <workItem from="1611543052310" duration="14049000" />
       <workItem from="1611580780370" duration="6659000" />
       <workItem from="1611627364940" duration="11767000" />
-      <workItem from="1611650857280" duration="3319000" />
+      <workItem from="1611650857280" duration="3561000" />
     </task>
     <task id="LOCAL-00001" summary="Rec : Fix permission api">
       <created>1611583049942</created>
@@ -304,7 +303,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51021000" />
+    <option name="totallyTimeSpent" value="51263000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="47" y="25" width="1873" height="1055" extended-state="6" />
@@ -460,16 +459,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/essential_words/wsgi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="43" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
-          <folding>
-            <element signature="e#231#240#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/essential_words/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -482,16 +471,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/words/tests.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/words/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/words/views.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -513,10 +492,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/words/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/essential_words/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="43" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
+          <folding>
+            <element signature="e#231#240#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/essential_words/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="662">
-          <caret line="149" selection-start-line="149" selection-end-line="149" />
+        <state relative-caret-position="707">
+          <caret line="152" column="71" selection-start-line="152" selection-start-column="71" selection-end-line="152" selection-end-column="71" />
           <folding>
             <element signature="e#316#340#0" expanded="true" />
           </folding>
