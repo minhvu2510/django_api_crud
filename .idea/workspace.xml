@@ -80,8 +80,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/essential_words/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="692">
-              <caret line="152" column="78" selection-start-line="152" selection-start-column="23" selection-end-line="152" selection-end-column="78" />
+            <state relative-caret-position="467">
+              <caret line="125" column="1" selection-start-line="125" selection-start-column="1" selection-end-line="125" selection-end-column="1" />
               <folding>
                 <element signature="e#316#340#0" expanded="true" />
               </folding>
@@ -290,7 +290,7 @@
       <workItem from="1611543052310" duration="14049000" />
       <workItem from="1611580780370" duration="6659000" />
       <workItem from="1611627364940" duration="11767000" />
-      <workItem from="1611650857280" duration="4037000" />
+      <workItem from="1611650857280" duration="4419000" />
     </task>
     <task id="LOCAL-00001" summary="Rec : Fix permission api">
       <created>1611583049942</created>
@@ -303,7 +303,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51739000" />
+    <option name="totallyTimeSpent" value="52121000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="47" y="25" width="1873" height="1055" extended-state="6" />
@@ -514,8 +514,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/essential_words/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="692">
-          <caret line="152" column="78" selection-start-line="152" selection-start-column="23" selection-end-line="152" selection-end-column="78" />
+        <state relative-caret-position="467">
+          <caret line="125" column="1" selection-start-line="125" selection-start-column="1" selection-end-line="125" selection-end-column="1" />
           <folding>
             <element signature="e#316#340#0" expanded="true" />
           </folding>
