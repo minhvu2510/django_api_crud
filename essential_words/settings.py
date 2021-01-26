@@ -45,8 +45,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'words.apps.WordsConfig',
     'django_filters',
-    'rest_framework.authtoken',
-    'rest_framework_swagger'
+    'rest_framework.authtoken'
 ]
 REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],

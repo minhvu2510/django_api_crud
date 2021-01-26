@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b4398712-a9e4-4155-92bf-f05d9e08a192" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/essential_words/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/essential_words/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,11 +74,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/essential_words/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="48" selection-start-line="48" selection-end-line="48" />
+            <state relative-caret-position="255">
+              <caret line="47" column="30" lean-forward="true" selection-start-line="47" selection-start-column="30" selection-end-line="47" selection-end-column="30" />
               <folding>
                 <element signature="e#316#340#0" expanded="true" />
               </folding>
@@ -95,7 +95,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/requirements.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
@@ -145,6 +145,7 @@
       <find>DEBUG</find>
       <find>drf_multiple_model</find>
       <find>TEMPLATES</find>
+      <find>rest_framework_swagger</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -164,9 +165,9 @@
         <option value="$PROJECT_DIR$/essential_words/swagger-ui.html" />
         <option value="$PROJECT_DIR$/essential_words/urls.py" />
         <option value="$PROJECT_DIR$/words/urls.py" />
-        <option value="$PROJECT_DIR$/essential_words/settings.py" />
         <option value="$PROJECT_DIR$/words/views.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/essential_words/settings.py" />
       </list>
     </option>
   </component>
@@ -275,7 +276,7 @@
       <workItem from="1611480451743" duration="3879000" />
       <workItem from="1611543052310" duration="14049000" />
       <workItem from="1611580780370" duration="6659000" />
-      <workItem from="1611627364940" duration="11185000" />
+      <workItem from="1611627364940" duration="11443000" />
     </task>
     <task id="LOCAL-00001" summary="Rec : Fix permission api">
       <created>1611583049942</created>
@@ -288,7 +289,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47120000" />
+    <option name="totallyTimeSpent" value="47378000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="47" y="25" width="1873" height="1055" extended-state="6" />
@@ -476,16 +477,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/essential_words/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
-          <folding>
-            <element signature="e#316#340#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/words/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -500,6 +491,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/essential_words/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="47" column="30" lean-forward="true" selection-start-line="47" selection-start-column="30" selection-end-line="47" selection-end-column="30" />
+          <folding>
+            <element signature="e#316#340#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
