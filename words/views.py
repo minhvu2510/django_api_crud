@@ -12,7 +12,6 @@ from rest_framework.permissions import IsAuthenticated, IsAuthenticatedOrReadOnl
 from rest_framework import permissions
 # from django.contrib.auth import authentication
 from rest_framework import authentication
-from drf_multiple_model.views import ObjectMultipleModelAPIView
 
 class WordList(mixins.ListModelMixin,
                   mixins.CreateModelMixin,

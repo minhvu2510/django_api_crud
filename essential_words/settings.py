@@ -46,7 +46,6 @@ INSTALLED_APPS = [
     'words.apps.WordsConfig',
     'django_filters',
     'rest_framework.authtoken',
-    'drf_multiple_model',
     'rest_framework_swagger'
 ]
 REST_FRAMEWORK = {
