@@ -12,6 +12,7 @@ from rest_framework.permissions import IsAuthenticated, IsAuthenticatedOrReadOnl
 from rest_framework import permissions
 # from django.contrib.auth import authentication
 from rest_framework import authentication
+from drf_multiple_model.views import ObjectMultipleModelAPIView
 
 class WordList(mixins.ListModelMixin,
                   mixins.CreateModelMixin,
@@ -26,10 +27,10 @@ class WordList(mixins.ListModelMixin,
     #                           authentication.TokenAuthentication]
     permission_classes = [permissions.DjangoModelPermissionsOrAnonReadOnly]
 
-    def get_permissions(self):
-        if self.request.method in ['PUT', 'DELETE']:
-            return [permissions.IsAdminUser()]
-        return [permissions.IsAuthenticated()]
+    # def get_permissions(self):
+    #     if self.request.method in ['PUT', 'DELETE']:
+    #         return [permissions.IsAdminUser()]
+    #     return [permissions.IsAuthenticated()]
     # permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     #
     # filter_backends = [filters.OrderingFilter]
@@ -76,6 +77,9 @@ class TopicList(mixins.ListModelMixin,
                   generics.GenericAPIView):
     queryset = Topic.objects.all()
     serializer_class = TopicSerializer
+    filter_backends = [DjangoFilterBackend]
+    filterset_fields = ['topic', 'level']
+    permission_classes = [permissions.DjangoModelPermissionsOrAnonReadOnly]
 
     def get(self, request, *args, **kwargs):
         return self.list(request, *args, **kwargs)
@@ -89,6 +93,9 @@ class TopicDetail(mixins.RetrieveModelMixin,
                     generics.GenericAPIView):
     queryset = Topic.objects.all()
     serializer_class = TopicSerializer
+    filter_backends = [DjangoFilterBackend]
+    filterset_fields = ['topic', 'level']
+    permission_classes = [permissions.DjangoModelPermissionsOrAnonReadOnly]
 
     def get(self, request, *args, **kwargs):
         return self.retrieve(request, *args, **kwargs)
