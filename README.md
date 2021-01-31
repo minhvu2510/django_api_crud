@@ -2,7 +2,7 @@
 ### Live demo (Deploy to heroku)
 https://toeic-essential-staging.herokuapp.com/openapi?format=openapi-json
 ### Intergriate with vuejs (Deploy to heroku, live demo)
-
+https://essential-words-toeic.herokuapp.com/
 
 ### Feature
 - [Filtering](https://www.django-rest-framework.org/api-guide/filtering/)
