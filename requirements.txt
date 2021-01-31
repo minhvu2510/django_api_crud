@@ -17,3 +17,4 @@ urllib3==1.26.2
 whitenoise==5.2.0
 pyyaml==5.4.1
 uritemplate==3.0.1
+django-cors-headers==3.7.0
