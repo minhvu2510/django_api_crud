@@ -3,7 +3,7 @@ import requests
 import time
 client = MongoClient('mongodb://localhost/', 27017)
 DATABASE = client.mvp
-lst = ['marketing', 'warranties', 'business_planning', 'conferences', 'computers', 'office_technology','electronics', 'regulations', 'correspondence',
+lst = ['contracts','marketing', 'warranties', 'business_planning', 'conferences', 'computers', 'office_technology','electronics', 'regulations', 'correspondence',
        'computers', 'shopping', 'marketing', 'inventory', 'storage', 'hiring_and_training']
 def get_document(table,query,order=None,distinct=None,page=None,limit=None,incre=-1):
     if page:
@@ -45,14 +45,16 @@ def create_topic():
         print(response)
         time.sleep(1)
 def create_words():
-    url = "http://127.0.0.1:8000/words"
+    # url = "http://127.0.0.1:8000/words"
+    url = "https://toeic-essential-staging.herokuapp.com/words"
     headers = {
-        'Authorization': 'af4593ff029c48db8abc4363803278da'
+        'Authorization': 'ec8f40cd6b7106f59475ff0a5f72e29c6dfc19b5'
     }
     query = {}
-    contrac = get_document('contracts', query)['data']
-    print(contrac[-1])
+    # contrac = get_document('contracts', query)['data']
+    # print(contrac[-1])
     for toipic in lst:
+        contrac = get_document(toipic, query)['data']
         for word in contrac:
             print(word['key'], word['value'])
             param = {'word': word['key'],
@@ -106,9 +108,9 @@ def create_data():
     for word in get_document(get_document('contracts', query)):
         print(word)
 def create_words():
-    url = "http://127.0.0.1:8000/words"
+    url = "https://toeic-essential-staging.herokuapp.com/words"
     headers = {
-        'Authorization': 'af4593ff029c48db8abc4363803278da'
+        'Authorization': 'Token ec8f40cd6b7106f59475ff0a5f72e29c6dfc19b5'
     }
     query = {}
     contrac = get_document('contracts', query)['data']
@@ -133,5 +135,5 @@ if __name__ == '__main__':
     # print(show_allcolection())
     # query = {}
     # print(get_document('contracts', query)['data'])
-    print(create_topic())
-    # print(create_words())
+    # print(create_topic())
+    print(create_words())
