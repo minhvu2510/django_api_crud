@@ -30,8 +30,8 @@ SECRET_KEY = 'i91u+0*v1@yv-go%grm=tnm5e8*eozzrr*2@cwtii$kxape^4)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['toeic-essential-staging.herokuapp.com', 'toeic-essential-production.herokuapp.com']
-
+ALLOWED_HOSTS = ['toeic-essential-staging.herokuapp.com', 'toeic-essential-production.herokuapp.com', '127.0.0.1:8080']
+CORS_ORIGIN_ALLOW_ALL = True
 
 # Application definition
 
@@ -77,6 +77,39 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:8080",
     "http://127.0.0.1:8080",
     "https://essential-words-toeic.herokuapp.com"
+]
+CSRF_TRUSTED_ORIGINS = [
+    'change.allowed.com',
+    "http://localhost:8080",
+    "http://127.0.0.1:8080",
+    "https://essential-words-toeic.herokuapp.com"
+]
+CORS_ORIGIN_WHITELIST = (
+    'change.allowed.com',
+    "http://localhost:8080",
+    "http://127.0.0.1:8080",
+    "https://essential-words-toeic.herokuapp.com"
+)
+CORS_ALLOW_METHODS = [
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+]
+CORS_ALLOW_HEADERS = [
+    'accept',
+    'accept-encoding',
+    'authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
+    'Currency',
+    'same-origin'
 ]
 
 ROOT_URLCONF = 'essential_words.urls'

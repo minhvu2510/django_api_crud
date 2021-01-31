@@ -3,7 +3,8 @@ import requests
 import time
 client = MongoClient('mongodb://localhost/', 27017)
 DATABASE = client.mvp
-lst = ['contracts','marketing', 'warranties', 'business_planning', 'conferences', 'computers', 'office_technology']
+lst = ['marketing', 'warranties', 'business_planning', 'conferences', 'computers', 'office_technology','electronics', 'regulations', 'correspondence',
+       'computers', 'shopping', 'marketing', 'inventory', 'storage', 'hiring_and_training']
 def get_document(table,query,order=None,distinct=None,page=None,limit=None,incre=-1):
     if page:
         if not limit:
@@ -33,14 +34,16 @@ def show_allcolection():
         allcolec.append(i)
     return allcolec
 def create_topic():
-    url = "http://127.0.0.1:8000/topics"
+    # url = "http://127.0.0.1:8000/topics"
+    url = "https://toeic-essential-staging.herokuapp.com/topics"
     headers = {
-        'Authorization': 'af4593ff029c48db8abc4363803278da'
+        'Authorization': 'ec8f40cd6b7106f59475ff0a5f72e29c6dfc19b5'
     }
     for topic in lst:
         param = {'topic': topic}
         response = requests.post(url, data=param, headers=headers, timeout=17)
         print(response)
+        time.sleep(1)
 def create_words():
     url = "http://127.0.0.1:8000/words"
     headers = {
@@ -66,20 +69,21 @@ def create_words():
     #     response = requests.post(url, data=param, headers=headers, timeout=17)
     #     print(response)
 def create_topic():
-    url = "http://127.0.0.1:8000/topics"
+    # url = "http://127.0.0.1:8000/topics"
+    url = "https://toeic-essential-staging.herokuapp.com/topics"
     headers = {
-        'Authorization': 'af4593ff029c48db8abc4363803278da'
+        'Authorization': 'Token ec8f40cd6b7106f59475ff0a5f72e29c6dfc19b5'
     }
     query = {}
     contrac = get_document('contracts', query)['data']
-    print(contrac[-1])
+    # print(contrac[-1])
     for toipic in lst:
         param = {'level': 10,
                  'topic': toipic
                  }
         response = requests.post(url, data=param, headers=headers, timeout=17)
         print(response)
-        time.sleep(1)
+        # time.sleep(1)
 def get_all(table):
     res = DATABASE[table].find()
     res = filter(lambda r: r != '', res)
@@ -129,5 +133,5 @@ if __name__ == '__main__':
     # print(show_allcolection())
     # query = {}
     # print(get_document('contracts', query)['data'])
-    # print(create_topic())
-    print(create_words())
+    print(create_topic())
+    # print(create_words())
